@@ -1,0 +1,19 @@
+body{
+  text-align: center;
+}
+#images_search_form_registration{
+  width: 100%;
+}
+#images_search_form_stock_ref{
+  width: 100%;
+}
+input.btn{
+  width: 100%;
+}
+.search{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.container{
+  margin-top: 2%;
+}

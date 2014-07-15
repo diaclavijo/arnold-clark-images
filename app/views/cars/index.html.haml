@@ -1,0 +1,16 @@
+.container
+  %h1 Arnold Clark Search Car
+  = simple_form_for :car, url: cars_path, method: :get  do |f|
+    .row.search
+      .col-md-3.col-md-offset-2
+        = f.input :registration, required: false, placeholder: 'Vehicle\'s registration plate', label: false
+      .col-md-3
+        = f.input :stock_ref, required: false, placeholder: 'Stock reference', label: false
+      .col-md-2
+        = f.button :submit, 'Find images', class: 'btn-primary btn-block'
+
+  #images
+    - @car && @car.images_list.each do |image|
+      = link_to image.gsub('350', '800'), {id: "car-image-#{image.split('/').last}", 'data-lightbox' => 'car-images'} do
+        = image_tag image, alt: nil, id: "car-image-#{image.split('/').last}", class: 'image'
+    %p#error_load_images{style: 'display: none;'} Be sure that the vehicle's registration plate and the stock reference are correct. If they are correct, there are no images for this car. They will come soon.
