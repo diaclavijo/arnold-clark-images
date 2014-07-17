@@ -26,9 +26,4 @@ end
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
-  gem 'webrat'
-end
-
-group :development, :test do
-  gem 'rspec-rails'
 end
