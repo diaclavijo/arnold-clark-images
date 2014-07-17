@@ -1,3 +1,6 @@
+- if @car
+  = provide :title, "#{@car.registration} | "
+
 .container
   %h1 Arnold Clark Search Car
   = simple_form_for :car, url: cars_path, method: :get  do |f|
