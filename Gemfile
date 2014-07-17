@@ -20,14 +20,15 @@ end
 gem 'debugger', group: [:development, :test]
 
 group :production do
-  gem 'rails_12factor', '0.0.2'
+  gem 'rails_12factor'
 end
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
+  gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'webrat'
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails'
 end
